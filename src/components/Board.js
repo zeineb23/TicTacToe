@@ -4,14 +4,12 @@ import { useState } from "react";
 import Congrats from "./Congrats";
 
 function Square({ value, onSquareClick }) {
-    
     return (
       <button className="square" onClick={onSquareClick}>
         {value}
       </button>
     );
   }
-  
   
 export default function Board() {
     
