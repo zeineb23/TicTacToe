@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/board.css';
 import { useState } from "react";
+import Congrats from "./Congrats";
 
 function Square({ value, onSquareClick }) {
     
@@ -16,6 +17,7 @@ export default function Board() {
     
     const [xIsNext, setXIsNext] = useState(true);
     const [squares, setSquares] = useState(Array(9).fill(null));
+    const [congrats, setCongrats] = useState(false);
     
     function handleClick(i) {
         if (squares[i] || calculateWinner(squares)) {
@@ -30,6 +32,9 @@ export default function Board() {
         }
         setSquares(nextSquares);
         setXIsNext(!xIsNext);
+        if (calculateWinner(nextSquares)) {
+          setCongrats(true);
+        }
     }
 
     const winner = calculateWinner(squares);
@@ -42,6 +47,7 @@ export default function Board() {
 
     return (
         <div className="container">
+       {congrats && <Congrats />}
         <div className="title"><b>Welcome to Tic-Tac-Toe</b></div>
             <div className="status"><b>{status}</b></div>
             <div className="board">
