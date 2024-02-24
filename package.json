@@ -2,7 +2,11 @@
   "name": "tic_tac_toe",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "homepage": "https://zeineb23.github.io/TicTacToe/",
+=======
+  "homepage": "https://zeineb23.github.io/TicTacToe",
+>>>>>>> 2b70bd18553edd00aea5782b0d9497dff141c2ff
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
